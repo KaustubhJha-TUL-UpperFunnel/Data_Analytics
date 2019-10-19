@@ -1,6 +1,6 @@
 install.packages('chemometrics')
 library('chemometrics')
-data<-read.table("/Users/GOUTHAM SEKAR/Desktop/auto-mpg.data")
+data<-read.table("/Users/APOORVE GUPTA/Desktop/auto-mpg.data")
 colnames(data) <- c("mpg", "cylinders", "displacement", "horsepower", "weight", "acceleration", "model.year", "origin", "car. name")
 summary(data)
 m <- lm(cbind(data$mpg,data$acceleration,data$horsepower) ~ data$cylinders + data$displacement + data$weight + data$model.year)
