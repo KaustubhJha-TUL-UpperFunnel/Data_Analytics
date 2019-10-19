@@ -1,14 +1,14 @@
 data("AirPassengers")
 library('Metrics')
 is.ts(AirPassengers)
-print(AirPassengers)
+print(AirPassengers) #summary of Air Passengers
 summary(AirPassengers)
 ts.plot(AirPassengers, xlab="Year", ylab="Number of Passengers", main="Monthly totals of international airline passengers, 1949-1960")
-abline(reg=lm(AirPassengers~time(AirPassengers)))
-acf(AirPassengers)
-plot(acf(AirPassengers))
+abline(reg=lm(AirPassengers~time(AirPassengers))) #line plots
+acf(AirPassengers) #auto correction function
+plot(acf(AirPassengers)) #plotting partial / auto correction function
 plot(pacf(AirPassengers))
-AR <- arima(AirPassengers, order = c(1,0,0))
+AR <- arima(AirPassengers, order = c(1,0,0)) #fits the arima plot of AirPassengers
 summary(AR)
 
 print(AR)
