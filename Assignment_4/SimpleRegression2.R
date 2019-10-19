@@ -1,4 +1,4 @@
-data<-read.csv("/Users/GOUTHAM SEKAR/Desktop/IRIS.csv")
+data<-read.csv("/Users/APOORVE GUPTA/Desktop/IRIS.csv")
 summary(data)
 plot(data)
 cor(data$sepal_length,data$petal_length)
